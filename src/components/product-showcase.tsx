@@ -9,38 +9,80 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Bike, Car, Tractor, Smartphone, User, ArrowRight } from "lucide-react";
+import { Bike, Car, Tractor, Smartphone, User, ArrowRight, Building, Gem, LandPlot, Briefcase, CarTaxiFront } from "lucide-react";
 
 const loanProducts = [
   {
     id: "two-wheeler-loan",
-    title: "Two Wheeler Loan",
-    description: "Get on the road with our easy and affordable two wheeler loans.",
+    title: "Bike Loan",
+    subTitle: "2 Minute Loan approval",
     icon: <Bike className="h-8 w-8 text-primary" />,
   },
   {
     id: "used-car-loan",
     title: "Used Car Loan",
-    description: "Drive your dream car with our flexible used car loan options.",
+    subTitle: "Loan approval in just 4 hours",
     icon: <Car className="h-8 w-8 text-primary" />,
   },
   {
-    id: "tractor-loan",
-    title: "Tractor Loan",
-    description: "Empower your farming with our specialized tractor loans.",
-    icon: <Tractor className="h-8 w-8 text-primary" />,
+    id: "consumer-durable-loan",
+    title: "Consumer Durable Loans",
+    subTitle: "No cost EMI",
+    icon: <Smartphone className="h-8 w-8 text-primary" />,
+  },
+  {
+    id: "mobile-loan",
+    title: "Mobile Loans",
+    subTitle: "Zero Down Payment",
+    icon: <Smartphone className="h-8 w-8 text-primary" />,
   },
   {
     id: "personal-loan",
-    title: "Personal Loan",
-    description: "Fulfill your personal needs with our instant personal loans.",
+    title: "Online Personal Loans",
+    subTitle: "100% paperless process",
     icon: <User className="h-8 w-8 text-primary" />,
   },
   {
-    id: "consumer-durable-loan",
-    title: "Consumer Durable Loan",
-    description: "Upgrade your lifestyle with loans for electronics and appliances.",
-    icon: <Smartphone className="h-8 w-8 text-primary" />,
+    id: "instacard-loan",
+    title: "InstaCard",
+    subTitle: "Pre-approved loan upto 1 lakh*",
+    icon: <User className="h-8 w-8 text-primary" />,
+  },
+  {
+    id: "gold-loan",
+    title: "Gold Loans",
+    subTitle: "Flexible Repayment Options",
+    icon: <Gem className="h-8 w-8 text-primary" />,
+  },
+  {
+    id: "used-commercial-vehicle-loan",
+    title: "Used Commercial Vehicle Loans",
+    subTitle: "Loans for up to 15-year-old Assets",
+    icon: <Building className="h-8 w-8 text-primary" />,
+  },
+  {
+    id: "tractor-loan",
+    title: "Tractor Loans",
+    subTitle: "Up to 90%* Funding",
+    icon: <Tractor className="h-8 w-8 text-primary" />,
+  },
+  {
+    id: "loan-against-property",
+    title: "Loan Against Property",
+    subTitle: "No hidden charges",
+    icon: <LandPlot className="h-8 w-8 text-primary" />,
+  },
+  {
+    id: "business-loan",
+    title: "Emerging & Mid-Corporate Business Loans",
+    subTitle: "Flexible repayment options",
+    icon: <Briefcase className="h-8 w-8 text-primary" />,
+  },
+  {
+    id: "three-wheeler-loan",
+    title: "Three Wheeler Loans",
+    subTitle: "Same day loan approval",
+    icon: <CarTaxiFront className="h-8 w-8 text-primary" />,
   },
 ];
 
@@ -51,40 +93,30 @@ export function ProductShowcase() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Our Loan Products</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Our Best Offers</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              We offer a diverse range of financing solutions tailored to meet your specific needs.
+              Explore our range of thoughtfully-curated financial products focused on your needs, available right at your fingertips.
             </p>
           </div>
         </div>
-        <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid grid-cols-1 gap-6 pt-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {loanProducts.map((product) => {
             const image = PlaceHolderImages.find((img) => img.id === product.id);
             return (
               <Card key={product.id} className="flex flex-col overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
-                {image && (
-                   <div className="relative h-48 w-full">
-                     <Image
-                       src={image.imageUrl}
-                       alt={image.description}
-                       data-ai-hint={image.imageHint}
-                       fill
-                       className="object-cover"
-                     />
-                   </div>
-                )}
-                <CardHeader className="flex-row items-start gap-4 space-y-0">
+                <CardHeader className="flex-row items-start gap-4 space-y-0 pb-4">
                   {product.icon}
                   <div className="flex-grow">
-                    <CardTitle>{product.title}</CardTitle>
-                    <CardDescription className="mt-1">{product.description}</CardDescription>
+                    <CardTitle className="text-lg">{product.title}</CardTitle>
+                    <CardDescription className="mt-1 text-sm">{product.subTitle}</CardDescription>
                   </div>
                 </CardHeader>
-                <CardFooter className="mt-auto">
-                  <Button variant="link" className="h-auto p-0 text-primary hover:text-primary/80">
-                    Apply Now <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </CardFooter>
+                <CardContent className="flex-grow flex flex-col justify-end p-4 pt-0">
+                   <div className="space-y-2">
+                      <Button variant="outline" className="w-full">Check Eligibility</Button>
+                      <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Apply Now</Button>
+                   </div>
+                </CardContent>
               </Card>
             );
           })}
