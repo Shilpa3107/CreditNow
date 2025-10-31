@@ -12,7 +12,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from '@/components/ui/card';
 
 const offers = [
-  { id: "offer-diwali", title: "Magical Diwali Offer" },
+  { id: "offer-christmas", title: "Magical Christmas Offer" },
   { id: "offer-neckband", title: "Free Neckband on Two Wheeler Loan" },
   { id: "offer-movie", title: "Movie Tickets on Two Wheeler Loan" },
 ];
