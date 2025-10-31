@@ -1,7 +1,16 @@
+"use client";
+
 import Link from 'next/link';
 import { Sparkles } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export function Footer() {
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="w-full border-t bg-background">
       <div className="container max-w-screen-2xl py-8">
@@ -41,7 +50,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} CreditNow. All rights reserved.</p>
+          <p>&copy; {year} CreditNow. All rights reserved.</p>
         </div>
       </div>
     </footer>
