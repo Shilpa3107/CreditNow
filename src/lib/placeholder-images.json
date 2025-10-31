@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "A happy person with a new car, representing financial freedom.",
+      "imageUrl": "https://images.unsplash.com/photo-1687975892982-45847c4fbdfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoYXBweSUyMHBlcnNvbiUyMGNhcnxlbnwwfHx8fDE3NjE4OTc4NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy person car"
+    },
+    {
+      "id": "two-wheeler-loan",
+      "description": "A modern scooter parked on a city street.",
+      "imageUrl": "https://images.unsplash.com/photo-1681765656650-e0c87babdfe6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb3RvcmN5Y2xlJTIwc2Nvb3RlcnxlbnwwfHx8fDE3NjE4OTc4NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "motorcycle scooter"
+    },
+    {
+      "id": "used-car-loan",
+      "description": "A person proudly standing next to their clean used car.",
+      "imageUrl": "https://images.unsplash.com/photo-1675310534327-1bdab1c9ae0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1c2VkJTIwY2FyfGVufDB8fHx8MTc2MTg5Nzg0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "used car"
+    },
+    {
+      "id": "tractor-loan",
+      "description": "A tractor in a field during a sunny day.",
+      "imageUrl": "https://images.unsplash.com/photo-1482941792858-55cfaf5afbe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYXJtJTIwdHJhY3RvcnxlbnwwfHx8fDE3NjE4OTc4NDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "farm tractor"
+    },
+    {
+      "id": "personal-loan",
+      "description": "A woman smiling, representing personal well-being.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzYxODg1MDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "consumer-durable-loan",
+      "description": "A collection of modern home appliances.",
+      "imageUrl": "https://images.unsplash.com/photo-1597418048367-7dd01e4404ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxob21lJTIwYXBwbGlhbmNlc3xlbnwwfHx8fDE3NjE4Nzc1OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "home appliances"
+    }
+  ]
 }
