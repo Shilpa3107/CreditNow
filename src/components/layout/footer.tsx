@@ -54,11 +54,13 @@ export function Footer() {
           </div>
            <div>
             <h3 className="mb-2 font-semibold text-foreground">Sign up for latest updates</h3>
-            <form className="flex flex-col gap-2">
-              <Input type="text" placeholder="Enter Your Full Name" />
-              <Input type="email" placeholder="Enter Your Email Address" />
-              <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90">Submit</Button>
-            </form>
+            {isClient && (
+              <form className="flex flex-col gap-2">
+                <Input type="text" placeholder="Enter Your Full Name" />
+                <Input type="email" placeholder="Enter Your Email Address" />
+                <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90">Submit</Button>
+              </form>
+            )}
           </div>
         </div>
         <div className="mt-8 border-t pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
