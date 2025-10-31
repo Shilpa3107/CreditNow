@@ -25,9 +25,10 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useToast } from "@/hooks/use-toast";
+import { useEffect, useState } from "react";
 
 const formSchema = z.object({
   customerType: z.string(),
@@ -38,6 +39,11 @@ const formSchema = z.object({
 export function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
   const { toast } = useToast();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -69,6 +75,7 @@ export function Hero() {
           </p>
           <Card className="max-w-lg shadow-lg">
             <CardContent className="p-6">
+              {isClient && (
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <Tabs defaultValue="new" className="w-full">
@@ -120,6 +127,7 @@ export function Hero() {
                   <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Quick Apply</Button>
                 </form>
               </Form>
+              )}
             </CardContent>
           </Card>
         </div>
