@@ -1,7 +1,10 @@
+"use client";
+
 import Link from 'next/link';
 import { Sparkles, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { useEffect, useState } from 'react';
 
 const navLinks = [
   { href: '#products', label: 'Products' },
@@ -10,6 +13,13 @@ const navLinks = [
 ];
 
 export function Header() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center">
@@ -30,6 +40,7 @@ export function Header() {
             ))}
           </nav>
         </div>
+        {isClient && (
         <div className="flex flex-1 items-center justify-end space-x-2">
           <Button variant="ghost">Login</Button>
           <Button className="hidden sm:inline-flex bg-accent text-accent-foreground hover:bg-accent/90">Apply Now</Button>
@@ -64,6 +75,7 @@ export function Header() {
             </SheetContent>
           </Sheet>
         </div>
+        )}
       </div>
     </header>
   );
