@@ -7,11 +7,10 @@ import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 
 export function Footer() {
-  const [year, setYear] = useState<number | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // This will only run on the client, preventing a hydration mismatch.
-    setYear(new Date().getFullYear());
+    setIsClient(true);
   }, []);
 
   return (
@@ -68,7 +67,7 @@ export function Footer() {
             <span className="font-bold">CreditNow</span>
           </div>
            <div className="text-center md:text-left">
-            {year && <p>&copy; {year} CreditNow. All rights reserved.</p>}
+            {isClient && <p>&copy; {new Date().getFullYear()} CreditNow. All rights reserved.</p>}
           </div>
            <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="#" className="hover:text-primary">Privacy Policy</Link>
