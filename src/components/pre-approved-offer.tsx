@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { User, Smartphone } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const formSchema = z.object({
   fullName: z.string().min(1, "Please enter your full name."),
@@ -23,6 +24,11 @@ const formSchema = z.object({
 
 export function PreApprovedOffer() {
   const { toast } = useToast();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -55,6 +61,7 @@ export function PreApprovedOffer() {
         <div className="mx-auto w-full max-w-sm">
           <Card>
             <CardContent className="p-6">
+              {isClient && (
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                   <FormField
@@ -92,6 +99,7 @@ export function PreApprovedOffer() {
                   </Button>
                 </form>
               </Form>
+              )}
             </CardContent>
           </Card>
         </div>
