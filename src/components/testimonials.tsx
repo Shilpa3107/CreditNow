@@ -1,3 +1,6 @@
+
+"use client";
+
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import {
   Card,
@@ -7,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "./ui/button";
+import { useEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -36,6 +40,12 @@ const testimonials = [
 ];
 
 export function Testimonials() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
       <div className="container px-4 md:px-6">
@@ -69,7 +79,7 @@ export function Testimonials() {
           })}
         </div>
         <div className="text-center mt-12">
-            <Button variant="outline">View All</Button>
+            {isClient && <Button variant="outline">View All</Button>}
         </div>
       </div>
     </section>
