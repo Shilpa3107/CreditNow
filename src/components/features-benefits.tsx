@@ -1,5 +1,9 @@
+
+"use client";
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const loanFeatures = [
     {
@@ -25,6 +29,12 @@ const loanFeatures = [
 ];
 
 export function FeaturesBenefits() {
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
     return (
         <section id="features" className="w-full py-12 md:py-24 lg:py-32">
             <div className="container px-4 md:px-6">
@@ -34,23 +44,25 @@ export function FeaturesBenefits() {
                     </div>
                 </div>
                 <div className="mx-auto max-w-3xl pt-12">
-                    <Accordion type="single" collapsible className="w-full">
-                        {loanFeatures.map((loan) => (
-                            <AccordionItem value={loan.title} key={loan.title}>
-                                <AccordionTrigger className="text-lg font-semibold">{loan.title}</AccordionTrigger>
-                                <AccordionContent>
-                                    <ul className="space-y-3 pl-4">
-                                        {loan.features.map((feature, index) => (
-                                            <li key={index} className="flex items-start">
-                                                <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                                                <span>{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </AccordionContent>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
+                    {isClient && (
+                        <Accordion type="single" collapsible className="w-full">
+                            {loanFeatures.map((loan) => (
+                                <AccordionItem value={loan.title} key={loan.title}>
+                                    <AccordionTrigger className="text-lg font-semibold">{loan.title}</AccordionTrigger>
+                                    <AccordionContent>
+                                        <ul className="space-y-3 pl-4">
+                                            {loan.features.map((feature, index) => (
+                                                <li key={index} className="flex items-start">
+                                                    <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                                    <span>{feature}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
+                    )}
                 </div>
             </div>
         </section>
