@@ -1,3 +1,6 @@
+
+"use client";
+
 import Image from 'next/image';
 import {
   Card,
@@ -10,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Bike, Car, Tractor, Smartphone, User, ArrowRight, Building, Gem, LandPlot, Briefcase, CarTaxiFront } from "lucide-react";
+import { useEffect, useState } from 'react';
 
 const loanProducts = [
   {
@@ -88,6 +92,12 @@ const loanProducts = [
 
 
 export function ProductShowcase() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <section id="products" className="w-full bg-muted/40 py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
@@ -112,10 +122,10 @@ export function ProductShowcase() {
                   </div>
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col justify-end p-4 pt-0">
-                   <div className="space-y-2">
+                   {isClient && <div className="space-y-2">
                       <Button variant="outline" className="w-full">Check Eligibility</Button>
                       <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Apply Now</Button>
-                   </div>
+                   </div>}
                 </CardContent>
               </Card>
             );
