@@ -39,7 +39,7 @@
     {
       "id": "offer-christmas",
       "description": "A festive image celebrating Christmas.",
-      "imageUrl": "https://images.unsplash.com/photo-1545696562-444269635427?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://images.unsplash.com/photo-1512154135246-857c15433a0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "christmas festival"
     },
     {
@@ -89,6 +89,48 @@
       "description": "A smartphone showcasing the Saathi app.",
       "imageUrl": "https://images.unsplash.com/photo-1730817403162-83d5094480ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzbWFydHBob25lJTIwYXBwfGVufDB8fHx8MTc2MTg5ODUyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "smartphone app"
+    },
+    {
+      "id": "instacard-loan",
+      "description": "A person holding a credit card.",
+      "imageUrl": "https://images.unsplash.com/photo-1609429019995-8c40f49535a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjcmVkaXQlMjBjYXJkfGVufDB8fHx8MTc2MjA3ODQ1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "credit card"
+    },
+    {
+      "id": "gold-loan",
+      "description": "A pile of gold coins.",
+      "imageUrl": "https://images.unsplash.com/photo-1624365168056-daf44387e2ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnb2xkJTIwY29pbnN8ZW58MHx8fHwxNzYyMTUyNzU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold coins"
+    },
+    {
+      "id": "used-commercial-vehicle-loan",
+      "description": "A commercial truck on the road.",
+      "imageUrl": "https://images.unsplash.com/photo-1760662052295-f84068499a03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21tZXJjaWFsJTIwdHJ1Y2t8ZW58MHx8fHwxNzYyMTI0NzM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "commercial truck"
+    },
+    {
+      "id": "loan-against-property",
+      "description": "A house with a for sale sign.",
+      "imageUrl": "https://images.unsplash.com/photo-1629584603667-e8ad7c8feb0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxob3VzZSUyMHByb3BlcnR5fGVufDB8fHx8MTc2MjE1NDc1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "house property"
+    },
+    {
+      "id": "business-loan",
+      "description": "A person working on a laptop in an office.",
+      "imageUrl": "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG9mZmljZXxlbnwwfHx8fDE3NjIxMjM0ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business office"
+    },
+    {
+      "id": "three-wheeler-loan",
+      "description": "An auto-rickshaw on a city street.",
+      "imageUrl": "https://images.unsplash.com/photo-1626491058156-2daaeea7f578?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhdXRvJTIwcmlja3NoYXd8ZW58MHx8fHwxNzYyMDk3ODQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "auto rickshaw"
+    },
+    {
+      "id": "mobile-loan",
+      "description": "A person holding a smartphone.",
+      "imageUrl": "https://images.unsplash.com/photo-1658263795405-58dabd577a94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzbWFydHBob25lJTIwbW9iaWxlfGVufDB8fHx8MTc2MjA5ODQyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smartphone mobile"
     }
   ]
 }
